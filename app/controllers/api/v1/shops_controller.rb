@@ -4,9 +4,8 @@ module Api
   module V1
     class ShopsController < ApiController
       def index
-        shops = Shop.all
-
-        render json: shops
+        @shops = Shop.all
+        render :index
       end
     end
   end
